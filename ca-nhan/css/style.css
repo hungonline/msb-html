@@ -68,6 +68,12 @@ body {
   background-image: url('../images/bg_canhanhoa.jpg');
 }
 
+.screen-3 .main-title {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
 /* ==========================================================================
    TYPOGRAPHY CHUNG
    ========================================================================== */
@@ -445,6 +451,7 @@ body {
   flex-wrap: wrap;
   row-gap: 20px;
   align-items: center;
+  align-content: start;
   justify-content: left;
   text-align: left;
   padding: clamp(16px, 2.5vh, 24px) clamp(14px, 1.2vw, 20px);
@@ -535,6 +542,7 @@ body {
   position: absolute;
   bottom: 20px;
   right: 30px;
+  z-index: 11;
 }
 
 
@@ -618,8 +626,8 @@ body {
    ========================================================================== */
 .my-phone-gold {
   position: absolute;
-  top: 2%;
-  bottom: 2%;
+  top: 0%;
+  bottom: 0%;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
