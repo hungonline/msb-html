@@ -540,10 +540,65 @@ body {
 
 .btn-back {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  bottom: clamp(16px, 4vh, 24px);
+  right: clamp(24px, 3.2vw, 50px);
   z-index: 11;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
+
+.btn-back:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ==========================================================================
+   TRANG MARKETPLACE (he-sinh-thai2-1.html)
+   ========================================================================== */
+.stage.stage-marketplace {
+  background-image: url('../images/bg_marketplace.jpg');
+}
+
+.marketplace-heading {
+  position: absolute;
+  top: 8.5%;
+  left: 15.2%;
+  text-align: left;
+  z-index: 10;
+}
+
+.marketplace-heading .main-title {
+  align-items: flex-start;
+  text-align: left;
+  font-size: clamp(26px, 3.2vw, 48px);
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+}
+
+.marketplace-heading .divider-line {
+  margin: clamp(10px, 1.8vh, 15px) 0 clamp(10px, 1.8vh, 15px) 0;
+}
+
+.marketplace-info {
+  margin-top: clamp(20px, 6vh, 35px);
+}
+
+.marketplace-grid {
+  position: absolute;
+  top: 10%;
+  left: 53.2%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+  column-gap: 15px;
+  z-index: 10;
+}
+
+.marketplace-grid .rewards-card {
+  min-height: 200px;
+  align-content: center;
+}
+
 
 
 .btn-cta {
@@ -666,13 +721,28 @@ body {
   }
 
   .brand-heading,
-  .detail-heading {
+  .detail-heading,
+  .marketplace-heading {
     position: relative;
     top: auto;
     left: auto;
     width: 100%;
     transform: none;
     margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .marketplace-heading .main-title {
+    align-items: center;
+    text-align: center;
+  }
+
+  .marketplace-heading .divider-line {
+    margin: clamp(7px, 1.4vh, 12px) auto 13px auto;
+  }
+
+  .marketplace-heading .sub-title {
+    text-align: center;
   }
 
   .ecosystem-heading {
@@ -681,7 +751,8 @@ body {
 
   .features-container,
   .detail-cards-container,
-  .rewards-cards-container {
+  .rewards-cards-container,
+  .marketplace-grid {
     position: relative;
     top: auto;
     left: auto;
@@ -713,7 +784,8 @@ body {
   }
 
   .detail-card,
-  .rewards-card {
+  .rewards-card,
+  .marketplace-card {
     width: 85%;
     max-width: 300px;
     height: auto;
