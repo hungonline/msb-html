@@ -60,6 +60,7 @@ body {
   background-size: cover;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
   overflow: hidden;
+  container-type: size;
 }
 
 /* Nền các trang chi tiết / tính năng */
@@ -414,17 +415,30 @@ body {
   height: stretch;
 }
 
+.dual-column-container {
+  top: 28%;
+  gap: clamp(16px, 2.5cqw, 42px);
+}
+
 .dual-column-container .detail-card {
-  width: clamp(230px, 18vw, 290px);
+  width: clamp(180px, 18cqw, 290px);
+  padding: clamp(10px, 2cqh, 24px) clamp(12px, 1.2cqw, 20px);
+  border-radius: clamp(14px, 1.5cqw, 26px);
+  row-gap: clamp(8px, 1.8cqh, 20px);
 }
 
 .dual-column-container .detail-card .detail-card-icon {
-  height: clamp(60px, 5.5vw, 85px);
+  height: clamp(48px, 5cqw, 85px);
 }
 
 .dual-column-container .detail-card .img-icon-3d {
-  max-width: clamp(55px, 5.2vw, 80px);
+  max-width: clamp(48px, 4.8cqw, 80px);
   object-fit: contain;
+}
+
+.dual-column-container .detail-card-desc {
+  font-size: clamp(11.5px, 1.05cqw, 17px);
+  line-height: 1.4;
 }
 
 /* ==========================================================================
@@ -432,35 +446,39 @@ body {
    ========================================================================== */
 .rewards-cards-container {
   position: absolute;
-  top: 38%;
+  top: 36%;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(14px, 1.8vw, 28px);
+  gap: clamp(12px, 1.6cqw, 28px);
   z-index: 10;
 }
 
+.rewards-cards-container .rewards-card {
+  width: clamp(160px, 16.2cqw, 250px);
+  min-height: clamp(130px, 28cqh, 200px);
+}
+
 .rewards-card {
-  width: clamp(190px, 16.2vw, 250px);
-  height: stretch;
-  border-radius: clamp(18px, 1.8vw, 26px);
+  border-radius: clamp(14px, 1.5cqw, 26px);
   display: flex;
   flex-wrap: wrap;
-  row-gap: 20px;
+  row-gap: clamp(8px, 1.6cqh, 20px);
   align-items: center;
   align-content: start;
   justify-content: left;
   text-align: left;
-  padding: clamp(16px, 2.5vh, 24px) clamp(14px, 1.2vw, 20px);
+  padding: clamp(10px, 2cqh, 24px) clamp(12px, 1.2cqw, 20px);
+  box-sizing: border-box;
 }
 
 .rewards-card-num {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: clamp(28px, 2.8vw, 44px);
+  font-size: clamp(20px, 2.4cqw, 42px);
   line-height: 1;
   color: #FFFFFF;
   background: linear-gradient(180deg, #f9eedf 0%, #d6b487 100%);
@@ -474,19 +492,19 @@ body {
 
 .rewards-card-desc {
   font-family: var(--font-family);
-  font-size: clamp(12px, 1.2vw, 18px);
+  font-size: clamp(10.5px, 1.05cqw, 17px);
   font-weight: 700;
-  line-height: 1.45;
+  line-height: 1.4;
   color: var(--text-primary);
 }
 
 .rewards-card-desc2 {
   text-transform: none;
-  font-size: clamp(12px, 1vw, 13px);
-  margin-top: 10px;
+  font-size: clamp(9.5px, 0.85cqw, 13px);
+  margin-top: clamp(4px, 1cqh, 10px);
   letter-spacing: 0.04em;
   font-weight: 400;
-  line-height: 1.45;
+  line-height: 1.4;
   color: #fff;
 }
 
@@ -510,7 +528,8 @@ body {
 
 .rewards-action-container {
   bottom: 0;
-  width: 100%;
+  width: auto;
+  pointer-events: none;
 }
 
 .chevron-indicator {
@@ -559,44 +578,118 @@ body {
   background-image: url('../images/bg_marketplace.jpg');
 }
 
+/* KHỐI TIÊU ĐỀ & ẢNH HỆ SINH THÁI BÊN TRÁI */
 .marketplace-heading {
   position: absolute;
-  top: 8.5%;
-  left: 15.2%;
-  text-align: left;
+  top: 7.03%;
+  left: 13.67%;
+  width: 35%;
   z-index: 10;
+  user-select: none;
+  text-align: left;
 }
 
 .marketplace-heading .main-title {
   align-items: flex-start;
   text-align: left;
-  font-size: clamp(26px, 3.2vw, 48px);
+  font-size: clamp(24px, 2.8cqw, 48px);
   line-height: 1.15;
   letter-spacing: 0.04em;
 }
 
 .marketplace-heading .divider-line {
-  margin: clamp(10px, 1.8vh, 15px) 0 clamp(10px, 1.8vh, 15px) 0;
+  margin: clamp(8px, 1.6cqh, 14px) 0 clamp(8px, 1.6cqh, 14px) 0;
+  width: clamp(70px, 7.5vw, 110px);
+}
+
+.marketplace-heading .sub-title {
+  font-size: clamp(11.5px, 1cqw, 15px);
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  color: #f9e7d0;
 }
 
 .marketplace-info {
-  margin-top: clamp(20px, 6vh, 35px);
+  margin-top: clamp(16px, 3.8cqh, 32px);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+.marketplace-info img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  max-height: 58cqh;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+
+/* KHỐI 4 THẺ TIỆN ÍCH BÊN PHẢI (POSITION: ABSOLUTE NHƯ FEATURE-CARD FILE INDEX.HTML) */
 .marketplace-grid {
   position: absolute;
-  top: 10%;
-  left: 53.2%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 15px;
-  column-gap: 15px;
+  inset: 0;
+  pointer-events: none;
   z-index: 10;
 }
 
 .marketplace-grid .rewards-card {
-  min-height: 200px;
-  align-content: center;
+  position: absolute;
+  width: 16.2%;
+  height: 35.16%;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.marketplace-grid .rewards-card-num {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: clamp(24px, 2.6cqw, 42px);
+  line-height: 1;
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #f9eedf 0%, #d6b487 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: clamp(8px, 1.8cqh, 18px);
+}
+
+.marketplace-grid .rewards-card-body {
+  width: 100%;
+}
+
+.marketplace-grid .rewards-card-desc {
+  font-family: var(--font-family);
+  font-size: clamp(11.5px, 1.05cqw, 16px);
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+/* TỌA ĐỘ 4 KHỐI CARD MARKETPLACE (CHUẨN THEO ẢNH REFERENCE) */
+.card-marketplace-1,
+.marketplace-grid .rewards-card:nth-child(1) {
+  left: 54.3%;
+  top: 7.03%;
+}
+
+.card-marketplace-2,
+.marketplace-grid .rewards-card:nth-child(2) {
+  left: 71.4%;
+  top: 7.03%;
+}
+
+.card-marketplace-3,
+.marketplace-grid .rewards-card:nth-child(3) {
+  left: 54.3%;
+  top: 45.5%;
+}
+
+.card-marketplace-4,
+.marketplace-grid .rewards-card:nth-child(4) {
+  left: 71.4%;
+  top: 45.5%;
 }
 
 
@@ -630,24 +723,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: clamp(10px, 4vh, 25px);
+  margin-top: clamp(8px, 2.5cqh, 22px);
 }
 
 .column-action .btn-cta {
-  min-width: clamp(145px, 12.2vw, 160px);
-  padding: clamp(8px, 1.6vh, 12px) clamp(22px, 2vw, 25px);
-  font-size: clamp(13px, 1vw, 18px);
+  min-width: clamp(120px, 11cqw, 160px);
+  padding: clamp(6px, 1.4cqh, 12px) clamp(16px, 1.8cqw, 25px);
+  font-size: clamp(11px, 0.95cqw, 17px);
 }
 
 /* Mô hình điện thoại */
 .rewards-action-label {
   font-family: var(--font-family);
-  font-size: clamp(9px, 0.8vw, 12px);
+  font-size: clamp(8px, 0.75cqw, 12px);
   font-weight: 300;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #D36C27;
-  margin-bottom: clamp(3px, 0.8vh, 6px);
+  margin-bottom: clamp(2px, 0.8cqh, 6px);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   user-select: none;
 }
@@ -663,7 +756,7 @@ body {
 }
 
 .img-phone-mockup {
-  width: clamp(160px, 16vw, 240px);
+  width: clamp(130px, 14cqw, 220px);
   height: auto;
   max-width: 100%;
   object-fit: contain;
@@ -790,6 +883,42 @@ body {
     max-width: 300px;
     height: auto;
     min-height: 160px;
+  }
+
+  .marketplace-info {
+    margin-top: 15px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .marketplace-info img {
+    max-width: 280px;
+    max-height: 180px;
+    margin: 0 auto;
+  }
+
+  .marketplace-grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    pointer-events: auto;
+  }
+
+  .marketplace-grid .rewards-card {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 85%;
+    max-width: 300px;
+    height: auto;
+    min-height: 130px;
   }
 
   .detail-action-container,
