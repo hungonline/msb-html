@@ -69,6 +69,10 @@ body {
   container-type: size;
 }
 
+.cover-screen {
+  background-image: url(../images/COVER.jpg);
+}
+
 /* Hiệu ứng hào quang quả địa cầu trung tâm */
 .stage::before {
   content: "";
