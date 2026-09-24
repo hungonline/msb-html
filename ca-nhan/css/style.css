@@ -102,6 +102,7 @@ body {
 .main-title span {
   display: block;
   color: #e5ceb0;
+  padding: 0.16em 0;
 }
 
 /* Đường gạch phân cách vàng kim */
