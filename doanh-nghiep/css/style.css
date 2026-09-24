@@ -120,17 +120,19 @@ body {
   font-size: clamp(22px, 2.7vw, 40px);
   line-height: 1.1;
   padding: 0.12em 0;
-  color: #C8DCFA;
-  background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #FFFFFF;
 }
 
 .main-title span {
   padding: 0.12em 0 0;
   line-height: 1.1;
   display: block;
-  color: #C8DCFA;
+  color: #FFFFFF;
+  /* background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%); */
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, #DCEBFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Đường gạch phân cách vàng kim */
@@ -301,10 +303,11 @@ body {
 
 .toiuu-card-title span {
   display: block;
-  background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%);
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, #DCEBFF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #C8DCFA;
 }
 
 
@@ -316,9 +319,11 @@ body {
   color: #FFFFFF;
   margin-bottom: clamp(6px, 1vh, 10px);
   display: block;
-  background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, #DCEBFF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 14px rgba(160, 210, 255, 0.45));
 }
 
 .toiuu-card-desc {
@@ -575,15 +580,17 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 0;
+  filter: drop-shadow(0 0 20px rgba(160, 210, 255, 0.6)) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.9));
 }
 
 .brand-heading .main-title span {
   display: block;
   line-height: 1.1;
-  background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%);
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, #DCEBFF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #C8DCFA;
 }
 
 .brand-heading .sub-title-bottom {
@@ -686,17 +693,18 @@ body {
 .feature-card .card-title span {
   display: block;
   padding: 0.12em 0 0;
-  background: linear-gradient(180deg, #d8d9dd 0%, #cdd8fe 100%);
+  color: #FFFFFF;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 60%, #DCEBFF 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #C8DCFA;
 }
 
 .feature-card:hover .card-title span {
   background: #FFFFFF;
   -webkit-background-clip: text;
   -webkit-text-fill-color: #FFFFFF;
-  color: #C8DCFA;
+  color: #FFFFFF;
 }
 
 .feature-card .card-desc {
